@@ -1,0 +1,60 @@
+.button__with__ripple {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  background-position: center;
+  transition: background 0.8s;
+  border-radius: 5em;
+  border: none;
+  padding: 5px 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+  width: 100%;
+  min-height: 2em;
+
+  &:hover {
+    cursor: pointer;
+    background: gainsboro radial-gradient(circle, transparent 1%, gainsboro 1%)
+      center/15000%;
+  }
+
+  &:active {
+    background-color: gainsboro;
+    color: dimgray !important;
+    background-size: 100% !important;
+    transition: background 0s !important;
+    outline: none !important;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: gainsboro !important;
+    color: darken(gainsboro, 20%) !important;
+    box-shadow: none;
+  }
+
+  &.button--purple {
+    background-color: #9573ff;
+  }
+
+  &.button--gold {
+    background-color: #f4c43d;
+  }
+  &.button--pink {
+    background-color: #ff2a5a;
+  }
+  &.button--white {
+    background-color: #fff;
+    color: #ea0028;
+  }
+  &.button--red {
+    background-color: #ea0028;
+  }
+  &.button--blue {
+    background-color: #001570;
+  }
+}

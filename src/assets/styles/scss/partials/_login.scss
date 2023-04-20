@@ -1,0 +1,166 @@
+//Mixins
+@mixin view {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: width 0.6s ease, max-width 0.6s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  &.active {
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@mixin login-header {
+  position: relative;
+  border-radius: 0 0 1.1em 1.1em;
+  height: 120px;
+  background-color: #ea0a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 16px;
+  color: #fff;
+
+  & svg {
+    cursor: pointer;
+    width: 7vw;
+    height: 7vw;
+  }
+}
+
+.login__header {
+  width: 100%;
+  min-height: 30vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+
+  & .login__header__content {
+    background-color: #001570;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .login__header__logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      & img {
+        height: 28vw;
+        object-fit: contain;
+      }
+    }
+
+    & .login__header__text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 16px 0;
+      color: #fff;
+
+      & span {
+        text-align: center;
+        max-width: 50%;
+      }
+    }
+  }
+
+  & .color__lines__wrapper {
+    width: 100%;
+
+    & .color__line {
+      width: 100%;
+      height: 0.58vw;
+
+      &.green {
+        background-color: #0ea141;
+      }
+      &.brown {
+        background-color: #2c2623;
+      }
+      &.red {
+        background-color: #de0e15;
+      }
+      &.yellow {
+        background-color: #f4e911;
+      }
+    }
+  }
+}
+
+.login__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  & .login__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5vw;
+
+    & .login__title__separator {
+      flex: 1;
+      height: 2px;
+      background-color: #5367cd;
+    }
+
+    & span {
+      font-family: "Roboto-Regular", sans-serif;
+      color: #363636;
+      text-align: center;
+      max-width: 40vw;
+      font-size: 3.5vw;
+      margin: 0 2vw;
+    }
+  }
+
+  & .login__form__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    & form {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & .form__label {
+        width: 100%;
+        font-family: "Roboto-Medium", sans-serif;
+        margin-bottom: 1vw;
+        font-size: 4vw;
+      }
+
+      & input {
+        margin-bottom: 5vw;
+        width: 100%;
+      }
+
+      & button {
+        margin-top: 5vw;
+        max-width: 50%;
+      }
+    }
+  }
+}
